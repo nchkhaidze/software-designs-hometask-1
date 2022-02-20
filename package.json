@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/nchkhaidze/software-designs-hometask-1/issues"
   },
-  "homepage": "https://github.com/nchkhaidze/software-designs-hometask-1#readme"
+  "homepage": "https://github.com/nchkhaidze/software-designs-hometask-1#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-import": "^2.25.4",
+    "prettier": "2.5.1"
+  }
 }
