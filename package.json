@@ -1,0 +1,19 @@
+{
+  "name": "software_designs_hometask_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "usage.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nchkhaidze/software-designs-hometask-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nchkhaidze/software-designs-hometask-1/issues"
+  },
+  "homepage": "https://github.com/nchkhaidze/software-designs-hometask-1#readme"
+}
