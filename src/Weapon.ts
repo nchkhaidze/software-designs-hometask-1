@@ -15,6 +15,8 @@ export abstract class Weapon extends Item {
     weight: number
   ) {
     super(name, value, weight);
+    this.baseDamage = baseDamage;
+    this.baseDurability = baseDurability;
   }
 
   getDamage(): number {
@@ -34,11 +36,11 @@ export abstract class Weapon extends Item {
       2
     )}.`;
 
+    this.durabilityModifier -= this.MODIFIER_CHANGE_RATE;
+
     if (this.getDurability() - this.MODIFIER_CHANGE_RATE <= 0) {
       return `${usageResult} \n The ${this.getName()} breaks.`;
     }
-
-    this.durabilityModifier -= this.MODIFIER_CHANGE_RATE;
 
     return usageResult;
   }
@@ -46,7 +48,7 @@ export abstract class Weapon extends Item {
   toString(): string {
     return `${super.toString()}, Damage: ${this.getDamage()}, Durability: ${(
       this.getDurability() * 100
-    ).toFixed(2)}`;
+    ).toFixed(2)}%`;
   }
 
   abstract polish(): void;

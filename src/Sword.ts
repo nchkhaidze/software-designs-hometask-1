@@ -12,6 +12,7 @@ export class Sword extends Weapon {
 
   polish() {
     const maximumDamageModifier = this.baseDamage * 0.25;
+    console.log(maximumDamageModifier);
 
     if (
       this.damageModifier + this.MODIFIER_CHANGE_RATE >

@@ -1,10 +1,9 @@
 import { Item } from "./Item";
 import { ItemComparator } from "./ItemComparator";
-import { ItemWeightComparator } from "./ItemWeightComparator";
 
 export class Inventory {
   items: Item[] = [];
-  sortComparator = new ItemWeightComparator();
+  sortComparator = new ItemValueComparator();
 
   addItem(item: Item) {
     this.items.push(item);
@@ -19,6 +18,12 @@ export class Inventory {
   }
 
   toString(): string {
-    return this.items.join(", ");
+    return this.items.join(", \n");
+  }
+}
+
+class ItemValueComparator implements ItemComparator {
+  compare(first: Item, second: Item): number {
+    return first.getValue() - second.getValue();
   }
 }
