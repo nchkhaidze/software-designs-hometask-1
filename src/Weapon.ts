@@ -3,9 +3,9 @@ import { Item } from "./Item";
 export abstract class Weapon extends Item {
   protected readonly MODIFIER_CHANGE_RATE = 0.05;
   protected baseDamage!: number;
-  protected damageModifier!: number;
+  protected damageModifier = 0;
   protected baseDurability!: number;
-  protected durabilityModifier!: number;
+  protected durabilityModifier = 0;
 
   protected constructor(
     name: string,
@@ -38,7 +38,7 @@ export abstract class Weapon extends Item {
       return `${usageResult} \n The ${this.getName()} breaks.`;
     }
 
-    this.baseDurability -= this.MODIFIER_CHANGE_RATE;
+    this.durabilityModifier -= this.MODIFIER_CHANGE_RATE;
 
     return usageResult;
   }
